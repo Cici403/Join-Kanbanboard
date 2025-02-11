@@ -9,7 +9,7 @@
 const CONFIG = {
   development: "http://127.0.0.1:5501",
   staging: "",
-  production: "https://join-401.developerakademie.net/JOIN",
+  production: "https://christian-schreter.developerakademie.net/JOIN",
 };
 
 /**
