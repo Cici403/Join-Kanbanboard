@@ -10,7 +10,8 @@ let earliestDate;
 /**
  * URL for the database
  */
-const BASE_URL = "https://join-kanbanboard-558ae-default-rtdb.europe-west1.firebasedatabase.app/";
+const BASE_URL =
+  "https://join-kanbanboard-558ae-default-rtdb.europe-west1.firebasedatabase.app/";
 
 /**
  * check if the user have the status in the locals storage from rememberMe of true than he goes direktly to the summary side
@@ -60,7 +61,9 @@ async function pushNewUserinFireBaseArray(event) {
   event.preventDefault();
   let userName = document.getElementById("signUpName").value;
   let userMail = document.getElementById("signUpInputMail").value;
-  let userPassword = document.getElementById("signUpConfirmInputPassword").value;
+  let userPassword = document.getElementById(
+    "signUpConfirmInputPassword"
+  ).value;
   const color = createRandomColor();
   const userData = {
     name: userName,
@@ -71,7 +74,10 @@ async function pushNewUserinFireBaseArray(event) {
     phone: "",
   };
   try {
-    let response = await postData(`users/${userMail.replace(".", "_")}`, userData);
+    let response = await postData(
+      `users/${userMail.replace(".", "_")}`,
+      userData
+    );
     createUser();
   } catch (error) {}
 }
@@ -146,7 +152,8 @@ function loadHelpHtml() {
  * and sets the onclick function for the return arrow.
  */
 function renderPrivacyPolicyTemplate() {
-  document.getElementById("termsContent").innerHTML += getPrivacyPolicyTemplate();
+  document.getElementById("termsContent").innerHTML +=
+    getPrivacyPolicyTemplate();
   changeReturnArrowOnclickFunction();
 }
 

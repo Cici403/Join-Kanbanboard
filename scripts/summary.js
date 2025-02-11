@@ -60,8 +60,6 @@ function putName() {
 async function getUserTasks() {
   let user = await fetch(BASE_URL + "tasks" + ".json");
   let responseAsJSON = await user.json();
-
-  // Überprüfe, ob responseAsJSON null oder undefined ist
   if (responseAsJSON) {
     let tasks = Object.values(responseAsJSON);
     lengthOfSummaryTasks(tasks);
